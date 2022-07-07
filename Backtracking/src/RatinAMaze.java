@@ -1,5 +1,3 @@
-package backtracking.src;
-
 public class RatinAMaze {
 
     public static void main(String[] args) {
@@ -29,11 +27,13 @@ public class RatinAMaze {
         path[i][j] =1;
         // Step 3: Check if the cell is destination cell
         if(i == n-1 && j == n-1){
+
             return true;
         }
         // Step 4: Explore further
         // a. Top
         if(solveMaze(maze,i-1,j, path)){
+            System.out.println(i-1);
             return true;
         }
         // b. Right
