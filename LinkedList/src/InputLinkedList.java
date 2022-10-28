@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class InputLinkedList {
-
     public static Node<Integer> takeInput(){
         Node<Integer> head = null,tail = null;
         Scanner s = new Scanner(System.in);
