@@ -36,7 +36,7 @@ public class RemoveSpaces {
             return ans;
         }
     }
-
+     
     public static void main(String[] args) {
         char[] s = {'A','l','l',' ','g','r','e','e','k','\t','t','o',' ','m','e'};
         for(char a: s){
