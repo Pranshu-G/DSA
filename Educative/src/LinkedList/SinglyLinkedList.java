@@ -114,17 +114,16 @@ public class SinglyLinkedList<T> {
     }
 
     public int length(){
-        if(head==null){
-            return 0;
-        }
-        int length = 0;
-        Node temp = head;
-
-        while(temp!=null){
-            length++;
-            temp=temp.next;
-        }
-        return length;
+            if(head==null){
+                return 0;
+            }
+            int count = 0;
+            Node temp = head;
+            while(temp!=null){
+                count++;
+                temp = temp.next;
+            }
+            return count;
     }
 
     boolean searchNode(T data){

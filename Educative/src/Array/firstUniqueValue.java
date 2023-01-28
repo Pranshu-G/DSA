@@ -4,27 +4,29 @@ public class firstUniqueValue {
 
     public static int findFirstUnique(int[] arr)
     {
-        int result = 0;
-        // write your code here
-
-        for(int i =0;i<arr.length;i++){
-            result=arr[i];
-            int ans = 0;
-            for(int j=i+1;j<arr.length;j++){
-                if(arr[j]==result){
+        int ans=0;
+        boolean isRepeated = false;
+        for(int i=0;i<arr.length;i++){
+            int curr = arr[i];
+            for(int j=0;j<arr.length;j++){
+                if(arr[j]==curr && i!=j){
+                    isRepeated=true;
                     break;
                 }
-                else{
-                   continue;
-                }
             }
-            return result;
+           if(isRepeated==false){
+               return curr;
+           }
+           else{
+               isRepeated=false;
+           }
         }
-        return result;
+
+        return -1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {4,5,1,2,0,4};
+        int[] arr = {4,4,4,3};
         int ans = findFirstUnique(arr);
         System.out.println(ans);
     }

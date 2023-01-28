@@ -3,9 +3,10 @@ package Array;
 public class RemoveEvenIntegers {
 
     public static int[] removeEven(int[] arr){
-        int i;
-        int count=0;
-        for(i=0;i<arr.length;i++){
+
+        int count = 0;
+        int n = arr.length;
+        for(int i=0;i<n;i++){
             if(arr[i]%2==0){
                 arr[i]=0;
             }
@@ -13,15 +14,14 @@ public class RemoveEvenIntegers {
                 count++;
             }
         }
+        int j = 0;
         int[] newArr = new int[count];
-        int j=0;
-        for (i = 0;  i<arr.length ; i++) {
+        for(int i=0;i<n;i++){
             if(arr[i]!=0){
-                newArr[j]=arr[i];
+                newArr[j] = arr[i];
                 j++;
             }
         }
-
         return newArr;
     }
 
