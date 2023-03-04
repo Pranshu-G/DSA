@@ -9,10 +9,10 @@ public class main {
         bsT.add(6);
         bsT.add(4);
         bsT.add(9);
-//        bsT.add(5);
-//        bsT.add(2);
-//        bsT.add(8);
-//        bsT.add(12);
+        bsT.add(5);
+        bsT.add(2);
+        bsT.add(8);
+        bsT.add(12);
 
 
         bsT.preOrder(bsT.getRoot());
