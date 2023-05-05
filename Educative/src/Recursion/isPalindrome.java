@@ -19,7 +19,24 @@ public class isPalindrome {
     }
 
     public static void main(String[] args) {
-        Object ans = isPalindrome("NAAN");
-        System.out.println(ans);
+        int[] arr= {1,2,3,4,5};
+        for(int i: arr){
+            System.out.print(i + " ");
+        }
+        arrReverse(arr,0,arr.length-1);
+       for(int i: arr){
+           System.out.print(i + " ");
+       }
+    }
+
+    public static void arrReverse(int[] arr, int start, int end){
+        if(start>=end){
+            return;
+        }
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        arrReverse(arr,start+1,end-1);
+
     }
 }
