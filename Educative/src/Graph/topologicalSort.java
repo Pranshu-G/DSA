@@ -16,6 +16,7 @@ public class topologicalSort {
                 }
             }
             int ans[] = new int[v];
+            int i =0;
             while(!stack.isEmpty()){
                 ans[i++] = stack.pop();
             }
@@ -34,19 +35,19 @@ public class topologicalSort {
             stack.push(v);
         }
 
-        static int[] topSortBFS(int v, ArrayList<ArrayList<Integer>> adj){
-            int[] inDeg = new int[v];
-            for(ArrayList<Integer> list:adj){
-                for(int e:list){
-                    inDeg[e]++;
-                }
-            }
-
-            boolean[] vis = new boolean[v];
-            ArrayList<Integer> ans = new ArrayList<>();
-
-            bfs(adj,v,0,vis,ans,inDeg);
-        }
+//        static int[] topSortBFS(int v, ArrayList<ArrayList<Integer>> adj){
+//            int[] inDeg = new int[v];
+//            for(ArrayList<Integer> list:adj){
+//                for(int e:list){
+//                    inDeg[e]++;
+//                }
+//            }
+//
+//            boolean[] vis = new boolean[v];
+//            ArrayList<Integer> ans = new ArrayList<>();
+//
+//            bfs(adj,v,0,vis,ans,inDeg);
+//        }
 
 
     static void bfs(ArrayList<ArrayList<Integer>> adj, int V , int v, boolean[] vis,ArrayList<Integer> ans, int[] inDeg){
