@@ -23,7 +23,7 @@ public class Graph {
             this.adjacencyList[source].insertAtEnd(destination);
         }
 //        for undirected graph
-//        this.adjacencyList[destination].insertAtEnd(source);
+        this.adjacencyList[destination].insertAtEnd(source);
     }
 
     public void printGraph(){

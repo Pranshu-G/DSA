@@ -45,7 +45,38 @@ public class CheckBFS {
         return result;
     }
 
+    static String BFS(Graph g){
+        String result = "";
+        boolean[] visited = new boolean[g.vertices];
+        for(int i=0;i<g.adjacencyList.length;i++){
+            if(!visited[i]){
+                result = result + helper(g,visited,i);
+            }
+        }
+        return result;
+    }
 
+    static String helper(Graph g, boolean[] visited,int source){
+        String result = "";
+        java.util.Queue<Integer> q = new LinkedList<>();
+        q.add(source);
+        visited[source] = true;
+        while(!q.isEmpty()){
+            int curr = q.poll();
+            result = result + String.valueOf(curr);
+            DoublyLinkedListTail<Integer>.Node temp = null;
+            if(g.adjacencyList[curr].getHeadNode()!=null){
+                temp = g.adjacencyList[curr].getHeadNode();
+            }
+            while(temp!=null){
+                q.add(temp.data);
+                visited[temp.data]=true;
+                temp=temp.next;
+            }
+        }
+        return result;
+
+    }
 
     public static void main(String args[]) {
         Graph g = new Graph(5);
@@ -56,6 +87,8 @@ public class CheckBFS {
         System.out.println("Graph1:");
         g.printGraph();
         System.out.println("BFS traversal of Graph1 : " + bfs(g));
+        System.out.println("BFS traversal of Graph1 from new function : " + BFS(g));
+
         System.out.println();
 
         Graph g2 = new Graph(5);
@@ -64,7 +97,7 @@ public class CheckBFS {
         g2.addEdge(1,2);
         g2.addEdge(3,4);
         System.out.println("Graph2:");
-        g2.printGraph();
-        System.out.println("BFS traversal of Graph2 : " + bfs(g2));
+//        g2.printGraph();
+//   m      System.out.println("BFS traversal of Graph2 : " + bfs(g2));
     }
 }
