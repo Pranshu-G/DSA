@@ -1,4 +1,4 @@
-package Bind75;
+package Blind75;
 
 public class SinglyLinkedList<T> {
     public class Node{

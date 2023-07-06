@@ -1,4 +1,4 @@
-package Bind75;
+package Blind75;
 
 import java.util.List;
 

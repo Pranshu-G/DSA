@@ -1,4 +1,4 @@
-package Bind75;
+package Blind75;
 
 public class SumOfTwoIntegers {
     public int getSum(int a,int b){

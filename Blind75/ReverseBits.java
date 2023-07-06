@@ -1,4 +1,4 @@
-package Bind75;
+package Blind75;
 
 public class ReverseBits {
     public int reverseBits(int n) {

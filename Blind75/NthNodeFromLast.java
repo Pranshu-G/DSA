@@ -1,6 +1,6 @@
-package Bind75;
+package Blind75;
 
-import Bind75.SinglyLinkedList.Node;
+import Blind75.SinglyLinkedList.Node;
 
 public class NthNodeFromLast {
     public Node removeNthFromEnd(Node head, int n) {
