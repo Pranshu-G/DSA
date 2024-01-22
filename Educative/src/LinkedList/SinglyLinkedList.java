@@ -8,7 +8,25 @@ public class SinglyLinkedList<T> {
 
     public Node head;
     public int size;
+    public void insertAtEnd1(T data) {
+        // Write -- Your -- Code
+        if(isEmpty()){
+            Node newNode = new Node();
+            newNode.data = data;
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        Node newNode = new Node();
+        newNode.data = data;
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        temp.next=newNode;
+        size++;
 
+
+    }
     public SinglyLinkedList(){
         head = null;
         size=0;
